@@ -84,6 +84,7 @@ npm install multicoin-address-validator
 * Odyssey/ocn `'Odyssey'` or `'ocn'` 
 * OmiseGO/omg `'OmiseGO'` or `'omg'` 
 * PeerCoin/ppc `'PeerCoin'` or `'ppc'` 
+* PirateChain/arrr `'ARRR'` or `'arrr'` 
 * PIVX/pivx `'PIVX'` or `'pivx'` 
 * Polymath/poly `'Polymath'` or `'poly'` 
 * PrimeCoin/xpm `'PrimeCoin'` or `'xpm'` 
