@@ -94,7 +94,6 @@ var CURRENCIES = [{
     symbol: 'vtc',
     addressTypes: { prod: ['0x', '47', '71', '05'], testnet: ['6f', 'c4'] },
     validator: BTCValidator
-    
 }, {
     name: 'BitcoinGold',
     symbol: 'btg',
@@ -404,6 +403,10 @@ var CURRENCIES = [{
     name: 'stellar',
     symbol: 'xlm',
     validator: XLMValidator,
+}, {
+    name: 'pirate',
+    symbol: 'arrr',
+    validator: BTCValidator,
 }];
 
 
