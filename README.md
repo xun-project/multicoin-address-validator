@@ -111,6 +111,8 @@ npm install multicoin-address-validator
 * VoteCoin/vot `'VoteCoin'` or `'vot'` 
 * Waves/waves `'Waves'` or `'waves'` 
 * Wings/wings `'Wings'` or `'wings'` 
+* Wownero/wow `'Wownero'` or `'wow'` 
+* Zano/zan `'Zano'` or `'zan'` 
 * ZCash/zec `'ZCash'` or `'zec'` 
 * ZClassic/zcl `'ZClassic'` or `'zcl'` 
 * ZenCash/zen `'ZenCash'` or `'zen'`

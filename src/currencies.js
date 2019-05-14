@@ -407,6 +407,24 @@ var CURRENCIES = [{
     name: 'pirate',
     symbol: 'arrr',
     validator: BTCValidator,
+}, {
+    name: 'wownero',
+    symbol: 'wow',
+    addressTypes: { prod: ['4146'], testnet: ['53'] },
+    iAddressTypes: { prod: ['6810'], testnet: ['54'] },
+    expectedLength: 97,
+    expectedIntegratedLength: 108,
+    expectedTestnetLength: 95,
+    expectedIntegratedTestnetLength: 106,
+    validator: XMRValidator,
+}, {
+    name: 'zano',
+    symbol: 'zan',
+    addressTypes: { prod: ['197'], testnet: [] },
+    iAddressTypes: { prod: [0x3678], testnet: [] },
+    expectedLength: 97,
+    expectedIntegratedLength: 108,
+    validator: XMRValidator,
 }];
 
 

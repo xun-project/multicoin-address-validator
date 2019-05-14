@@ -554,6 +554,21 @@ describe('WAValidator.validate()', function () {
       valid('zs1xylu42dht08zy4p5c7lgzhh42m350c0sppgqcxwvjvwqraxgq9m9yj356egmatn0q88zvu3jyu0', 'arrr');
       valid('zs1xylu42dht08zy4p5c7lgzhh42m350c0sppgqcxwvjvwqraxgq9m9yj356egmatn0q88zvu3jyu0', 'ARRR');
     });
+
+    it('should return true for correct wownero addresses', function () {
+      valid('So2ifgjqGMZJhCrqpFMotQQAiJAiATuJLNAK2HrPLoNzK8hkqNbf9t8gmx6bzAQrXRMnWnoELoiD6GTv8guPBRwH5ynAzv9j4PK16dmXNsuc', 'wow');
+      valid('Wo4m7F7syuvCgDsX4TJ7LPHwoKEJmApmzGpEicfQpWNY6nGqSHAxrGx8EbxhN6usL5645Cj1oKPnk5hdCfrAhLhx1kZHEft8q', 'wownero');
+      valid('Wo5F2arB93E6EPM11URsH61afYW2oP6PG8b2ZdEafzKHFG7SbGuUQDeHzN3kQuBMzNbUygE4847AhFB4zMjKrX552j2HVLb3j', 'wow');
+      valid('9zuKdp6MrQaBSw85QP2fFh8zznN8tPbpJQZhX6wyVGHb5TdJu4QYcPK7EtfhUtnYbVUCFkNM9sPfViN5HvmXxV9iEVJP2o8', 'wow', 'testnet');
+    });
+
+    it('should return true for correct zano addresses', function () {
+      valid('iZ1gc2mQWmG6uZ8Hd13KZ7bqa2YDTreGCNbYAJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm7cyQkAkbabz35owWPtiV5gzKExpvRx31uQdtear8', 'zan');
+      valid('ZxCXrAt8wRgNTEdAejBuvTF5bPmxE47SJ5feYUEyekuKa7ufxcxJC7xXV1tweXNTv6gBxvMqGz8p99nKY3SZirp32afpteMRi', 'zano');
+      valid('ZxCCUjfrShx6uZ8Hd13KZ7bqa2YDTreGCNbYAJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm7cyQkAkbabz35owWPtiV1ExkyteaA', 'zan');
+      valid('ZxDNdmYqVuA1RbQmHW2KR4cZifZV5hUrygGEfwgtCvq9RN8uud747SZ27wf6ZDhmeU9qxjYwCe3zEgEEfT66pSxk1E6znvszn', 'zan');
+      valid('iZ1gc2mQWmG6uZ8Hd13KZ7bqa2YDTreGCNbYAJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm7cyQkAkbabz35owWPtiV5gyuTwmWw2g2Fu8LUT69', 'zan');
+    });
   });
 
   describe('invalid results', function () {
@@ -880,6 +895,22 @@ describe('WAValidator.validate()', function () {
       invalid('zs1fnug4zz7wmfvr48zg6t2gj9ykr5uyrs2e2k6pg0n8870mnx0z6mrh5h2k3hx56q5nfe9skzq5cz', 'pirate');
       invalid('zs1xylu42dht08zy4p5c7lgzhhv2m350c0sppgqcxwvjvwqraxgq9m9yj356egmatn0q88zvu3jyu0', 'arrr');
       invalid('zs1xylu42dht08zy4p5cglgzhl42m350c0sppgqcxwvjvwqraxgq9m9yj356egmatn0q88zvu3jyu0', 'ARRR');
+    });
+
+    it('should return false for incorrect wownero addresses', function () {
+      commonTests('wownero');
+      invalid('So2ifgjqGMZJhCrqpFMotQQAiJAiATuJLNAK2HrPLoNx18hkqNbf9t8gmx6bzAQrXRMnWnoELoiD6GTv8guPBRwH5ynAzv9j4PK16dmXNsuc', 'wow');
+      invalid('Wo4m7F7syuvCgDsX4TJ7LPHwoKEJmApmzGx1icfQpWNY6nGqSHAxrGx8EbxhN6usL5645Cj1oKPnk5hdCfrAhLhx1kZHEft8q', 'wownero');
+      invalid('Wo5F2arB93E6EPM11URsH61x1YW2oP6PG8b2ZdEafzKHFG7SbGuUQDeHzN3kQuBMzNbUygE4847AhFB4zMjKrX552j2HVLb3j', 'wow');
+      invalid('9zuKdp6MrQaBSw85QP2fFh8zznN8tPx1JQZhX6wyVGHb5TdJu4QYcPK7EtfhUtnYbVUCFkNM9sPfViN5HvmXxV9iEVJP2o8', 'wow', 'testnet');
+    });
+
+    it('should return false for incorrect zano addresses', function () {
+      invalid('iZ1gc2mQWmG7uZ8Hd13KZ7bqa2YDTreGCNbYAJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm7cyQkAkbabz35owWPtiV5gzKExpvRx31uQdtear8', 'zan');
+      invalid('ZxCXrAt8wRgNTEdAejBuvTF5bPmxE4111111YUEyekuKa7ufxcxJC7xXV1tweXNTv6gBxvMqGz8p99nKY3SZirp32afpteMRi', 'zano');
+      invalid('ZxCCUjfrShx6uZ8Hd13KZ7bqa3YDTr111111AJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm7cyQkAkbabz35owWPtiV1ExkyteaA', 'zan');
+      invalid('ZxDNdmYqVuA1RbQmHW2KR4cZifZV6h111111fwgtCvq9RN8uud747SZ27wf6ZDhmeU9qxjYwCe3zEgEEfT66pSxk1E6znvszn', 'zan');
+      invalid('iZ1gc2mQWmG6uZ8Hd13KZ7bqa2YDTr111111AJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm8cyQkAkbabz35owWPtiV5gyuTwmWw2g2Fu8LUT69', 'zan');
     });
   });
 });
