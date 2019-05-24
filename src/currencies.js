@@ -425,6 +425,12 @@ var CURRENCIES = [{
     expectedLength: 97,
     expectedIntegratedLength: 108,
     validator: XMRValidator,
+}, {
+    name: 'conceal',
+    symbol: 'ccx',
+    addressTypes: { prod: [0x7ad4], testnet: [] },
+    expectedLength: 98,
+    validator: XMRValidator,
 }];
 
 

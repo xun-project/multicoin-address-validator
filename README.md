@@ -48,6 +48,7 @@ npm install multicoin-address-validator
 * Callisto/clo `'Callisto'` or `'clo'` 
 * Cardano/ada `'Cardano'` or `'ada'` 
 * Civic/cvc `'Civic'` or `'cvc'` 
+* Conceal/ccx `'Conceal'` or `'ccx'` 
 * Dash/dash `'Dash'` or `'dash'` 
 * Decred/dcr `'Decred'` or `'dcr'` 
 * DigiByte/dgb `'DigiByte'` or `'dgb'` 

@@ -569,6 +569,15 @@ describe('WAValidator.validate()', function () {
       valid('ZxDNdmYqVuA1RbQmHW2KR4cZifZV5hUrygGEfwgtCvq9RN8uud747SZ27wf6ZDhmeU9qxjYwCe3zEgEEfT66pSxk1E6znvszn', 'zan');
       valid('iZ1gc2mQWmG6uZ8Hd13KZ7bqa2YDTreGCNbYAJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm7cyQkAkbabz35owWPtiV5gyuTwmWw2g2Fu8LUT69', 'zan');
     });
+
+    it('should return true for correct conceal addresses', function () {
+      valid('ccx7eC5fEABK1wyrJWiuaThKtU7LbfrzaUfj1diAvKtj6fFRpR2ymbqXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZi71SCy', 'conceal');
+      valid('ccx7Jibx3n75V4myunVdyJDuyuTsQvkMeAq7UUpurbr4Lt8jBzwMApTXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZiTQu9u', 'ccx');
+      valid('ccx7fWv9D56UBVnU6TVn7DAQEvCUv9CiFHfqcLNdjTMp8DdpZ5cVqyYL7DEzCBBC7w2BaAzqnAe1aKPdyuEqpRic5USXtBTSbX', 'ccx');
+      valid('ccx7BnTqX4eAbU7NQPJ6ieAHLyNcRApFiMZVR35fiZzfeoh5HwxGxZZXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZhzjWQ3', 'ccx');
+      valid('ccx7XekEfeBbMbbe96kw9i5zh38woeKdtT98qG6UWu7UhMj9sn4Av7FMKPHQWjigxLg3b2YE2a7TMitmwTLuf6CG3hM8vSCmwT', 'ccx');
+      valid('ccx7JVxUaCgYeyEBgRtTGwBEMFG23fHPZ36E9Z3oP2L2SkLsV99qWohbdND31jPHZy8Y3qsyxVH9bfWZT8e76XHn8MrZWHnL7C', 'ccx');
+    });
   });
 
   describe('invalid results', function () {
@@ -911,6 +920,14 @@ describe('WAValidator.validate()', function () {
       invalid('ZxCCUjfrShx6uZ8Hd13KZ7bqa3YDTr111111AJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm7cyQkAkbabz35owWPtiV1ExkyteaA', 'zan');
       invalid('ZxDNdmYqVuA1RbQmHW2KR4cZifZV6h111111fwgtCvq9RN8uud747SZ27wf6ZDhmeU9qxjYwCe3zEgEEfT66pSxk1E6znvszn', 'zan');
       invalid('iZ1gc2mQWmG6uZ8Hd13KZ7bqa2YDTr111111AJ7HHNfEPSxk7iCKpCsBfpFTPoLfvibm8cyQkAkbabz35owWPtiV5gyuTwmWw2g2Fu8LUT69', 'zan');
+    });
+
+    it('should return false for incorrect conceal addresses', function () {
+      invalid('ccx8eC5fEABK1wyrJWiuaThKtU7LbfrzaUfj1diAvKtj6fFRpR2ymbqXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZi71SCy', 'conceal');
+      invalid('ccxxJibx3n75V4myunVdyJDuyuTsQvkMeAq7UUpurbr4Lt8jBzwMApTXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZiTQu9u', 'ccx');
+      invalid('ccx7xxv9D56UBVnU6TVn7DAQEvCUv9CiFHfqcLNdjTMp8DdpZ5cVqyYL7DEzCBBC7w2BaAzqnAe1aKPdyuEqpRic5USXtBTSbX', 'ccx');
+      invalid('ccx7BnTqX4eAbU7NQPJ6ieAHLyNcRApFiMZVR35fiZzfeoh5HwxGxZZXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZhzjXXX', 'ccx');
+      invalid('ccx7XekEfeBbMbbe96kw9i5zh38woeKdtT98qG6UWu7UhMj9sn4Av7FMKPHQWjigxLg3b2YE2a7TMitmwTLuf6CG3hM81', 'ccx');
     });
   });
 });
