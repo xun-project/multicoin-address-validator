@@ -116,6 +116,7 @@ npm install multicoin-address-validator
 * Zano/zan `'Zano'` or `'zan'` 
 * ZCash/zec `'ZCash'` or `'zec'` 
 * ZClassic/zcl `'ZClassic'` or `'zcl'` 
+* ZelCash/zel `'ZelCash'` or `'zel'`
 * ZenCash/zen `'ZenCash'` or `'zen'`
 
 ### Usage example

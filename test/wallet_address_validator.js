@@ -578,6 +578,13 @@ describe('WAValidator.validate()', function () {
       valid('ccx7XekEfeBbMbbe96kw9i5zh38woeKdtT98qG6UWu7UhMj9sn4Av7FMKPHQWjigxLg3b2YE2a7TMitmwTLuf6CG3hM8vSCmwT', 'ccx');
       valid('ccx7JVxUaCgYeyEBgRtTGwBEMFG23fHPZ36E9Z3oP2L2SkLsV99qWohbdND31jPHZy8Y3qsyxVH9bfWZT8e76XHn8MrZWHnL7C', 'ccx');
     });
+
+    it('should return true for correct zelcash addresses', function () {
+      valid('t1Zq7Efz5gsviNTxFnnw5w3d2a57b89VZpg', 'zelcash');
+      valid('t1a6XPhFV92w231ByvbZm8ZVkUTcv4PmxNY', 'zel');
+      valid('t1cRh4vqjM1Q86s8F4yXHKjYj5Tdv5zTDda', 'zel');
+      valid('t1ZtYoXA4rRR56LySQWryYLsEGWxdNFQVvE', 'zel');
+    });
   });
 
   describe('invalid results', function () {
@@ -928,6 +935,13 @@ describe('WAValidator.validate()', function () {
       invalid('ccx7xxv9D56UBVnU6TVn7DAQEvCUv9CiFHfqcLNdjTMp8DdpZ5cVqyYL7DEzCBBC7w2BaAzqnAe1aKPdyuEqpRic5USXtBTSbX', 'ccx');
       invalid('ccx7BnTqX4eAbU7NQPJ6ieAHLyNcRApFiMZVR35fiZzfeoh5HwxGxZZXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZhzjXXX', 'ccx');
       invalid('ccx7XekEfeBbMbbe96kw9i5zh38woeKdtT98qG6UWu7UhMj9sn4Av7FMKPHQWjigxLg3b2YE2a7TMitmwTLuf6CG3hM81', 'ccx');
+    });
+
+    it('should return false for incorrect zelcash addresses', function () {
+      invalid('t1XX7Efz5gsviNTxFnnw5w3d2a57b89VZpg', 'zelcash');
+      invalid('t1a6XPhFV92w231ByvbZm8ZVkUTcv4Pmx', 'zel');
+      invalid('t1cRh4vqjM1Q86s8XXyXHKjYj5Tdv5zTDda', 'zel');
+      invalid('t1ZtYoXA4rRR56LySQWryYLsEGWxdNFQVvEXX', 'zel');
     });
   });
 });

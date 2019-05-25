@@ -431,6 +431,12 @@ var CURRENCIES = [{
     addressTypes: { prod: [0x7ad4], testnet: [] },
     expectedLength: 98,
     validator: XMRValidator,
+}, {
+    name: 'zelcash',
+    symbol: 'zel',
+    expectedLength: 26,
+    addressTypes: { prod: ['1cb8', '1cbd'], testnet: ['1d25', '1cba'] },
+    validator: BTCValidator
 }];
 
 
