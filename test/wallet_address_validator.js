@@ -577,6 +577,7 @@ describe('WAValidator.validate()', function () {
       valid('ccx7BnTqX4eAbU7NQPJ6ieAHLyNcRApFiMZVR35fiZzfeoh5HwxGxZZXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZhzjWQ3', 'ccx');
       valid('ccx7XekEfeBbMbbe96kw9i5zh38woeKdtT98qG6UWu7UhMj9sn4Av7FMKPHQWjigxLg3b2YE2a7TMitmwTLuf6CG3hM8vSCmwT', 'ccx');
       valid('ccx7JVxUaCgYeyEBgRtTGwBEMFG23fHPZ36E9Z3oP2L2SkLsV99qWohbdND31jPHZy8Y3qsyxVH9bfWZT8e76XHn8MrZWHnL7C', 'ccx');
+      valid('ccx7NM9z2PSAZvJCQiCc2f94ipcK7GxZqAESAoa9XLq6HHpWQ1DLrCCHnxhRBBAkNX9u7cedGhz4F9RuTdY12bgE9bdxVSnFn9gLdmKfdS2qy9VdiBdDqcTbKLd21iP78on2NExDechEG98cR7pWS5PffYDa1cYQcj45PWxy2cWsNEer8eXGSJgibk', 'ccx');
     });
 
     it('should return true for correct zelcash addresses', function () {
@@ -935,6 +936,7 @@ describe('WAValidator.validate()', function () {
       invalid('ccx7xxv9D56UBVnU6TVn7DAQEvCUv9CiFHfqcLNdjTMp8DdpZ5cVqyYL7DEzCBBC7w2BaAzqnAe1aKPdyuEqpRic5USXtBTSbX', 'ccx');
       invalid('ccx7BnTqX4eAbU7NQPJ6ieAHLyNcRApFiMZVR35fiZzfeoh5HwxGxZZXtznxBsofFP8JB32YYBmtwLdoEirjAbYo4DBZhzjXXX', 'ccx');
       invalid('ccx7XekEfeBbMbbe96kw9i5zh38woeKdtT98qG6UWu7UhMj9sn4Av7FMKPHQWjigxLg3b2YE2a7TMitmwTLuf6CG3hM81', 'ccx');
+      invalid('ccx7NM9z2PXXXvJCQiCc2f94ipcK7GxZqAESAoa9XLq6HHpWQ1DLrCCHnxhRBBAkNX9u7cedGhz4F9RuTdY12bgE9bdxVSnFn9gLdmKfdS2qy9VdiBdDqcTbKLd21iP78on2NExDechEG98cR7pWS5PffYDa1cYQcj45PWxy2cWsNEer8eXGSJgibk', 'ccx');
     });
 
     it('should return false for incorrect zelcash addresses', function () {

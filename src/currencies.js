@@ -429,7 +429,9 @@ var CURRENCIES = [{
     name: 'conceal',
     symbol: 'ccx',
     addressTypes: { prod: [0x7ad4], testnet: [] },
+    iAddressTypes: { prod: [0x7ad4], testnet: [] },
     expectedLength: 98,
+    expectedIntegratedLength: 186,
     validator: XMRValidator,
 }, {
     name: 'zelcash',
