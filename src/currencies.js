@@ -434,6 +434,14 @@ var CURRENCIES = [{
     expectedIntegratedLength: 186,
     validator: XMRValidator,
 }, {
+    name: 'ultranoteinfinity',
+    symbol: 'xuni',
+    addressTypes: { prod: [0x2de638], testnet: [] },
+    iAddressTypes: { prod: [0x2de638], testnet: [] },
+    expectedLength: 98,
+    expectedIntegratedLength: 186,
+    validator: XMRValidator,
+}, {
     name: 'zelcash',
     symbol: 'zel',
     expectedLength: 26,

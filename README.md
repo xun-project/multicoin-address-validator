@@ -107,6 +107,7 @@ npm install multicoin-address-validator
 * Tether/usdt `'Tether'` or `'usdt'` 
 * tron/trx `'tron'` or `'trx'` 
 * TrueUSD/tusd `'TrueUSD'` or `'tusd'` 
+* UltraNoteInfinity/xuni `'UltraNoteInfinity'` or `'xuni'` 
 * VertCoin/vtc `'VertCoin'` or `'vtc'` 
 * Viberate/vib `'Viberate'` or `'vib'` 
 * VoteCoin/vot `'VoteCoin'` or `'vot'` 

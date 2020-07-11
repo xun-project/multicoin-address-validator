@@ -579,6 +579,13 @@ describe('WAValidator.validate()', function () {
       valid('ccx7JVxUaCgYeyEBgRtTGwBEMFG23fHPZ36E9Z3oP2L2SkLsV99qWohbdND31jPHZy8Y3qsyxVH9bfWZT8e76XHn8MrZWHnL7C', 'ccx');
       valid('ccx7NM9z2PSAZvJCQiCc2f94ipcK7GxZqAESAoa9XLq6HHpWQ1DLrCCHnxhRBBAkNX9u7cedGhz4F9RuTdY12bgE9bdxVSnFn9gLdmKfdS2qy9VdiBdDqcTbKLd21iP78on2NExDechEG98cR7pWS5PffYDa1cYQcj45PWxy2cWsNEer8eXGSJgibk', 'ccx');
     });
+	
+	    it('should return true for correct ultranoteinfinity addresses', function () {
+      valid('XuniifT4VknNzungF2woJaS5ZBqobSpoMAL8fs4mkjqraf3P2sxXXevGabqrxDAeWsiaMY5jigHEm5i5RtzdSVxQ38xhV8qiNHJ', 'xuni');
+      valid('XuniiirUkkE7WQANYHZXAUe7ufiUGwWRBceqNHjf3Y1dbg6Lf2YuSr3a1UAoaYs4coUheRSDmh7rMWEN8LUnvz7yMEP2ANExiMD', 'xuni');
+      valid('XuniigPSnhG8KUJeAQKBapBQcS5U667gqJuTSS29YNNmKiQDborrXg4b9vx6zEznohSJGu58SqQbgNFNUwZpec5Sgiat9nXq4p5', 'xuni');
+      valid('XuniifqDHSp2khZoTG3E2APz2Ff1PmTm34KNagUGcvbBjh274L8cwuJgFe4hMXLTLLaLm1tLJc2EyebnYKKB4dUj716CfkCgN9b', 'xuni');
+	  });
 
     it('should return true for correct zelcash addresses', function () {
       valid('t1Zq7Efz5gsviNTxFnnw5w3d2a57b89VZpg', 'zelcash');
@@ -938,6 +945,13 @@ describe('WAValidator.validate()', function () {
       invalid('ccx7XekEfeBbMbbe96kw9i5zh38woeKdtT98qG6UWu7UhMj9sn4Av7FMKPHQWjigxLg3b2YE2a7TMitmwTLuf6CG3hM81', 'ccx');
       invalid('ccx7NM9z2PXXXvJCQiCc2f94ipcK7GxZqAESAoa9XLq6HHpWQ1DLrCCHnxhRBBAkNX9u7cedGhz4F9RuTdY12bgE9bdxVSnFn9gLdmKfdS2qy9VdiBdDqcTbKLd21iP78on2NExDechEG98cR7pWS5PffYDa1cYQcj45PWxy2cWsNEer8eXGSJgibk', 'ccx');
     });
+	
+	it('should return false for incorrect ultranoteinfinity addresses', function () {
+      invalid('Xun2ifqDHSp2khZoTG3E2APz2Ff1PmTm34KNagUGcvbBjh274L8cwuJgFe4hMXLTLLaLm1tLJc2EyebnYKKB4dUj716CfkCgN9b', 'xuni');
+      invalid('Xun3igPSnhG8KUJeAQKBapBQcS5U667gqJuTSS29YNNmKiQDborrXg4b9vx6zEznohSJGu58SqQbgNFNUwZpec5Sgiat9nXq4p5', 'xuni');
+      invalid('XunibirUkkE7WQANYHZXAUe7ufiUGwWRBceqNHjf3Y1dbg6Lf2YuSr3a1UAoaYs4coUheRSDmh7rMWEN8LUnvz7yMEP2ANExiMD', 'xuni');
+      invalid('XunttfT4VknNzungF2woJaS5ZBqobSpoMAL8fs4mkjqraf3P2sxXXevGabqrxDAeWsiaMY5jigHEm5i5RtzdSVxQ38xhV8qiNHJ', 'xuni');
+	  });
 
     it('should return false for incorrect zelcash addresses', function () {
       invalid('t1XX7Efz5gsviNTxFnnw5w3d2a57b89VZpg', 'zelcash');
