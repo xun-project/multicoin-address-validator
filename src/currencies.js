@@ -438,7 +438,7 @@ var CURRENCIES = [{
     symbol: 'xuni',
     addressTypes: { prod: [0x2de638], testnet: [] },
     iAddressTypes: { prod: [0x2de638], testnet: [] },
-    expectedLength: 98,
+    expectedLength: 99,
     expectedIntegratedLength: 186,
     validator: XMRValidator,
 }, {
